@@ -1,0 +1,5 @@
+Desligar;/usr/share/xlunch/themes/white_circle_mix/icons/shutdown.png;shutdown
+Reiniciar;/usr/share/xlunch/themes/white_circle_mix/icons/restart.png;restart
+Suspender;/usr/share/xlunch/themes/white_circle_mix/icons/suspend.png;suspend
+Bloquear;/usr/share/xlunch/themes/white_circle_mix/icons/lock.png;lock
+Sair;/usr/share/xlunch/themes/white_circle_mix/icons/cancel.png;logout
