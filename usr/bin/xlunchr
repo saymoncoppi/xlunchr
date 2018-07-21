@@ -31,6 +31,8 @@ xlunch --input /etc/xlunch/entries.dsv \
 --iconpadding 20 \
 --textpadding 10 \
 --iconsize 48 \
+--leastmargin 10 \
+--hidemissing \
 --highlight /usr/share/xlunch/icons/base/xlunch_highlight.png \
 --font "/usr/share/xlunch/fonts/NotoSans-Regular.ttf/8" \
 --button "/usr/share/xlunch/icons/base/xlunch_settings.png;;-30,-30;xlunch_settings" \
