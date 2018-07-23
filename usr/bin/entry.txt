@@ -1,0 +1,189 @@
+anydesk
+
+AnyDesk;/usr/share/xlunch/icons/entries/anydesk.png;anydesk;
+ChmSee;/usr/share/pixmaps/chmsee-icon.png;chmsee;
+/usr/share/icons/deepin/apps/128/crossover.svg
+
+CrossOver;/usr/share/xlunch/icons/entries//usr/share/icons/deepin/apps/128/crossover.png;/opt/cxoffice/bin/crossover;
+CrossOver (Restore);/opt/cxoffice/share/icons/48x48/cxarchive.png;/opt/cxoffice/support/desktopdata/cxoffice-0/cxassoc/Scripts/cxoffice-0:application_x-crossover-cxarchive::restore;
+CrossOver (Install);/opt/cxoffice/share/icons/48x48/cxexe.png;/opt/cxoffice/support/desktopdata/cxoffice-0/cxassoc/Scripts/cxoffice-0:application_x-crossover-exe::install;
+CrossOver (Run);/opt/cxoffice/share/icons/48x48/cxexe.png;/opt/cxoffice/support/desktopdata/cxoffice-0/cxassoc/Scripts/cxoffice-0:application_x-crossover-exe::run;
+CrossOver (Run);/opt/cxoffice/share/icons/48x48/cxexe.png;/opt/cxoffice/support/desktopdata/cxoffice-0/cxassoc/Scripts/cxoffice-0:application_x-crossover-lnk::run;
+CrossOver (Install);/opt/cxoffice/share/icons/48x48/cxexe.png;/opt/cxoffice/support/desktopdata/cxoffice-0/cxassoc/Scripts/cxoffice-0:application_x-crossover-msi::install;
+CrossOver (Install);/opt/cxoffice/share/icons/32x32/c4p.png;/opt/cxoffice/support/desktopdata/cxoffice-1/cxassoc/Scripts/cxoffice-1:application_x-crossover-c4p::install;
+CrossOver (Install);/opt/cxoffice/share/icons/48x48/tie.png;/opt/cxoffice/support/desktopdata/cxoffice-1/cxassoc/Scripts/cxoffice-1:application_x-crossover-tie::install;
+DockbarX Preference;/usr/share/icons/hicolor/128x128/apps/dockbarx.png;dbx_preference;
+computer
+
+Computer;/usr/share/xlunch/icons/entries/computer.png;gvfs-open computer:///;
+/usr/share/icons/deepin/apps/48/preferences-system.svg
+
+Control Center;/usr/share/xlunch/icons/entries//usr/share/icons/deepin/apps/48/preferences-system.png;dbus-send --print-reply --dest=com.deepin.dde.ControlCenter /com/deepin/dde/ControlCenter com.deepin.dde.ControlCenter.Show;
+/usr/share/icons/deepin/apps/128/dde-file-manager.svg
+
+New Window;/usr/share/xlunch/icons/entries//usr/share/icons/deepin/apps/128/dde-file-manager.png;dde-file-manager --new-window;
+/usr/share/icons/deepin/apps/128/dde-introduction.svg
+
+Deepin Introduction;/usr/share/xlunch/icons/entries//usr/share/icons/deepin/apps/128/dde-introduction.png;/usr/bin/dde-introduction;
+user-trash
+
+Trash;/usr/share/xlunch/icons/entries/user-trash.png;gvfs-open trash:///;
+DeckHub;/usr/share/icons/hicolor/128x128/apps/DeckHub.png;"DeckHub";
+/usr/share/icons/deepin/apps/128/deepin-appstore.svg
+
+Deepin Store;/usr/share/xlunch/icons/entries//usr/share/icons/deepin/apps/128/deepin-appstore.png;deepin-appstore;
+/usr/share/icons/deepin/apps/128/deepin-boot-maker.svg
+
+Deepin Boot Maker;/usr/share/xlunch/icons/entries//usr/share/icons/deepin/apps/128/deepin-boot-maker.png;deepin-boot-maker;
+/usr/share/icons/deepin/apps/128/deepin-clone.svg
+
+Deepin Clone;/usr/share/xlunch/icons/entries//usr/share/icons/deepin/apps/128/deepin-clone.png;/usr/bin/deepin-clone-pkexec;
+
+
+;/usr/share/xlunch/icons/entries/.png;;
+deepin-cloud-scan-configurator
+
+Deepin Cloud Scan;/usr/share/xlunch/icons/entries/deepin-cloud-scan-configurator.png;deepin-cloud-scan-configurator;
+/usr/share/icons/deepin/apps/128/deepin-deb-installer.svg
+
+Deepin Package Manager;/usr/share/xlunch/icons/entries//usr/share/icons/deepin/apps/128/deepin-deb-installer.png;deepin-deb-installer;
+/usr/share/icons/deepin/apps/128/deepin-feedback.svg
+
+Deepin User Feedback;/usr/share/xlunch/icons/entries//usr/share/icons/deepin/apps/128/deepin-feedback.png;deepin-feedback;
+/usr/share/icons/deepin/apps/128/deepin-font-installer.svg
+
+Deepin Font Installer;/usr/share/xlunch/icons/entries//usr/share/icons/deepin/apps/128/deepin-font-installer.png;deepin-font-installer;
+/usr/share/icons/deepin/apps/128/deepin-graphics-driver-manager.svg
+
+Deepin Graphics Driver Manager;/usr/share/xlunch/icons/entries//usr/share/icons/deepin/apps/128/deepin-graphics-driver-manager.png;deepin-graphics-driver-manager;
+/usr/share/icons/deepin/apps/128/deepin-manual.svg
+
+Deepin Manual;/usr/share/xlunch/icons/entries//usr/share/icons/deepin/apps/128/deepin-manual.png;dman;
+
+
+Metacity;/usr/share/xlunch/icons/entries/.png;metacity;
+/usr/share/icons/deepin/apps/128/deepin-movie.svg
+
+Deepin Movie;/usr/share/xlunch/icons/entries//usr/share/icons/deepin/apps/128/deepin-movie.png;deepin-movie;
+/usr/share/icons/deepin/apps/128/deepin-system-monitor.svg
+
+Deepin System Monitor;/usr/share/xlunch/icons/entries//usr/share/icons/deepin/apps/128/deepin-system-monitor.png;deepin-system-monitor;
+/usr/share/icons/deepin/apps/128/deepin-terminal.svg
+
+Quake Terminal;/usr/share/xlunch/icons/entries//usr/share/icons/deepin/apps/128/deepin-terminal.png;deepin-terminal --quake-mode;
+/usr/share/icons/deepin/apps/128/deepin-toggle-desktop.svg
+
+Show Desktop;/usr/share/xlunch/icons/entries//usr/share/icons/deepin/apps/128/deepin-toggle-desktop.png;/usr/lib/deepin-daemon/desktop-toggle;
+
+
+Deepin Window Manager;/usr/share/xlunch/icons/entries/.png;deepin-wm;
+/usr/share/icons/deepin/apps/128/deepin-multitasking-view.svg
+
+Multitasking View;/usr/share/xlunch/icons/entries//usr/share/icons/deepin/apps/128/deepin-multitasking-view.png;dbus-send --session --dest=com.deepin.wm --print-reply /com/deepin/wm com.deepin.wm.PerformAction int32:1;
+
+
+Gala (wayland compositor);/usr/share/xlunch/icons/entries/.png;gala --wayland --display-server;
+ImageMagick (color depth=q16);/usr/share/icons/hicolor/128x128/apps/display-im6.q16.png;/usr/bin/display-im6.q16 -nostdin;
+DockX;/usr/share/icons/hicolor/128x128/apps/dockbarx.png;dockx;
+Dropbox;/usr/share/icons/hicolor/64x64/apps/dropbox.png;dropbox start -i;
+/usr/share/icons/deepin/apps/128/evince.svg
+
+Document Viewer;/usr/share/xlunch/icons/entries//usr/share/icons/deepin/apps/128/evince.png;evince;
+document-print-preview
+
+Print Preview;/usr/share/xlunch/icons/entries/document-print-preview.png;evince-previewer;
+/usr/share/pixmaps/filezilla.svg
+
+FileZilla;/usr/share/xlunch/icons/entries//usr/share/pixmaps/filezilla.png;filezilla;
+Firefox;/usr/share/pixmaps/firefox.png;/usr/lib/firefox/firefox;
+security-medium
+
+Access Prompt;/usr/share/xlunch/icons/entries/security-medium.png;/usr/lib/gcr/gcr-prompter;
+
+
+View file;/usr/share/xlunch/icons/entries/.png;/usr/bin/gcr-viewer;
+/usr/share/icons/deepin/apps/48/geany.svg
+
+Geany;/usr/share/xlunch/icons/entries//usr/share/icons/deepin/apps/48/geany.png;geany;
+mark-location-symbolic
+
+Where am I?;/usr/share/xlunch/icons/entries/mark-location-symbolic.png;xterm -ls -e /usr/lib/geoclue-2.0/demos/where-am-i;
+git-cola
+
+Git Cola;/usr/share/xlunch/icons/entries/git-cola.png;git-cola --prompt;
+git-cola
+
+Git Cola;/usr/share/xlunch/icons/entries/git-cola.png;git-cola --repo;
+git-cola
+
+Git DAG;/usr/share/xlunch/icons/entries/git-cola.png;git-dag --prompt;
+GitKraken;/usr/share/pixmaps/app.png;/usr/share/gitkraken/gitkraken;
+Root Terminal;/usr/share/pixmaps/gksu-root-terminal.png;gksu /usr/bin/x-terminal-emulator;
+/usr/share/icons/deepin/apps/128/accessories-calculator.svg
+
+Calculator;/usr/share/xlunch/icons/entries//usr/share/icons/deepin/apps/128/accessories-calculator.png;gnome-calculator;
+/usr/share/icons/deepin/apps/128/google-chrome.svg
+
+New Incognito Window;/usr/share/xlunch/icons/entries//usr/share/icons/deepin/apps/128/google-chrome.png;/usr/bin/google-chrome-stable --incognito;
+/usr/share/icons/deepin/apps/128/gparted.svg
+
+GParted;/usr/share/xlunch/icons/entries//usr/share/icons/deepin/apps/128/gparted.png;gparted-pkexec;
+/usr/share/icons/deepin/apps/48/gpicview.svg
+
+Image Viewer;/usr/share/xlunch/icons/entries//usr/share/icons/deepin/apps/48/gpicview.png;gpicview;
+Reactivate HP LaserJet 1018/1020 after reloading paper;/usr/share/pixmaps/hplj1020_icon.png;/usr/share/foo2zjs/hplj10xx_gui.tcl;
+IcedTea Java Web Start;/usr/share/pixmaps/javaws.png;/usr/bin/javaws;
+IcedTea Web Control Panel;/usr/share/pixmaps/javaws.png;/usr/bin/itweb-settings;
+/usr/share/icons/deepin/apps/48/driver-manager.svg
+
+Driver Manager;/usr/share/xlunch/icons/entries//usr/share/icons/deepin/apps/48/driver-manager.png;driver-manager;
+OpenJDK Java 8 Policy Tool;/usr/share/icons/hicolor/48x48/apps/openjdk-8.png;/usr/bin/policytool;
+/usr/share/icons/deepin/apps/48/file-roller.svg
+
+Archive Manager;/usr/share/xlunch/icons/entries//usr/share/icons/deepin/apps/48/file-roller.png;file-roller;
+/usr/share/icons/deepin/apps/128/preferences-desktop-font.svg
+
+Font Viewer;/usr/share/xlunch/icons/entries//usr/share/icons/deepin/apps/128/preferences-desktop-font.png;gnome-font-viewer;
+/usr/share/icons/deepin/apps/128/gedit.svg
+
+New Document;/usr/share/xlunch/icons/entries//usr/share/icons/deepin/apps/128/gedit.png;gedit --new-document;
+PNMixer;/usr/share/icons/hicolor/128x128/apps/pnmixer.png;pnmixer;
+Python (v2.7);/usr/share/pixmaps/python2.7.xpm;xterm -ls -e /usr/bin/python2.7;
+Python (v3.5);/usr/share/pixmaps/python3.5.xpm;xterm -ls -e /usr/bin/python3.5;
+redshift
+
+Redshift;/usr/share/xlunch/icons/entries/redshift.png;xterm -ls -e redshift;
+Start Remmina Minimized;/usr/share/icons/hicolor/128x128/apps/remmina.png;/usr/bin/remmina --icon;
+/usr/share/icons/deepin/apps/48/roxterm.svg
+
+ROXTerm;/usr/share/xlunch/icons/entries//usr/share/icons/deepin/apps/48/roxterm.png;roxterm;
+/usr/share/icons/deepin/apps/128/scanner.svg
+
+Simple Scan;/usr/share/xlunch/icons/entries//usr/share/icons/deepin/apps/128/scanner.png;simple-scan;
+Quit Skype;/usr/share/pixmaps/skypeforlinux.png;/usr/bin/skypeforlinux --shutdown;
+/usr/share/icons/deepin/apps/48/printer.svg
+
+Print Settings;/usr/share/xlunch/icons/entries//usr/share/icons/deepin/apps/48/printer.png;system-config-printer;
+/usr/share/icons/deepin/apps/48/transmission.svg
+
+Start Transmission Minimized;/usr/share/xlunch/icons/entries//usr/share/icons/deepin/apps/48/transmission.png;transmission-gtk --minimized;
+/usr/share/icons/deepin/apps/48/unetbootin.svg
+
+UNetbootin;/usr/share/xlunch/icons/entries//usr/share/icons/deepin/apps/48/unetbootin.png;/usr/bin/unetbootin;
+Open Oracle VM Manager;/usr/share/icons/hicolor/64x64/apps/virtualbox.png;VirtualBox;
+/usr/share/icons/deepin/apps/128/wps-office-etmain.svg
+
+WPS Spreadsheets;/usr/share/xlunch/icons/entries//usr/share/icons/deepin/apps/128/wps-office-etmain.png;/usr/bin/et;
+/usr/share/icons/deepin/apps/128/wps-office-wppmain.svg
+
+WPS Presentation;/usr/share/xlunch/icons/entries//usr/share/icons/deepin/apps/128/wps-office-wppmain.png;/usr/bin/wpp;
+/usr/share/icons/deepin/apps/128/wps-office-wpsmain.svg
+
+WPS Writer;/usr/share/xlunch/icons/entries//usr/share/icons/deepin/apps/128/wps-office-wpsmain.png;/usr/bin/wps;
+applications-system-symbolic
+
+Portal;/usr/share/xlunch/icons/entries/applications-system-symbolic.png;/usr/lib/xdg-desktop-portal/xdg-desktop-portal-gtk;
+help-browser
+
+Help;/usr/share/xlunch/icons/entries/help-browser.png;yelp;
+zoiper5;/usr/share/pixmaps/zoiper5.png;zoiper5 --dial=;

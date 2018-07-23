@@ -113,74 +113,57 @@ clear; echo "Checking basic tools"; echo
 "--quickgen") 
 #begin quickgen
 ICONTHEME=$(cat ~/.gtkrc-2.0 | grep gtk-icon-theme-name= | sed -e "s/^gtk-icon-theme-name=//" |sed  's/["]//g')
-if [ $ICONTHEME = "" ]; then
-echo "Pls type your theme name: "
-read ICONTHEME
-fi
-ICONSIZES="$1 128 64 48 32" # icon search in given order
-ICONPATHS="/usr/share/icons/$ICONTHEME /usr/share/icons/hicolor /usr/share/pixmaps"
-NEWICONSIZE=128
+
+ICONSIZE="$1 128 64 48 32" # icon search in given order
+ICONPATH="/usr/share/icons/"$ICONTHEME"/apps/48/"
+
 # $1..$n = dir path with .desktop files
 process_directories()
 {
-   while [ "$1" != "" ]; do
+echo "" > /etc/xlunch/entries.dsv
 
-      for desktop in "$1"/*.desktop; do
+while [ "$1" != "" ]; do
 
-         Name=
-         Icon=
-         Exec=
-         Hidden=
-         Terminal=
-         Categories=
+for desktop in "$1"/*.desktop; do
 
-         while read LINE; do
-            eval $LINE
-         done <<< $(cat $desktop | egrep '^(Name|Icon|Exec|Hidden|Terminal|Categories)=' | sed -r "s/ *%.*//" | sed -r "s/=(.*)/='\\1'/")   #'
+Name=
+Icon=
+Exec=
+Hidden=
+Terminal=
 
-         if [ "$Hidden" = "true" ]; then
-            continue
-         fi
+while read LINE; do
+eval $LINE
+done <<< $(cat $desktop | egrep '^(Name|Icon|Exec|Hidden|Terminal)=' | sed -r "s/ *%.*//" | sed -r "s/=(.*)/='\\1'/")   #'
 
-         for size in $ICONSIZES; do
-            for ICONPATH in $ICONPATHS; do
-			   icon=$ICONPATH/apps/$size/$Icon
-               if [ -f "$icon".svg ]; then Icon="$icon".svg; break; fi
-               if [ -f "$icon".png ]; then Icon="$icon".png; break; fi
-               if [ -f "$icon" ]; then Icon=$icon; break 2; fi
-               icon=$ICONPATH/$size"x"$size/apps/$Icon
-               if [ -f "$icon".svg ]; then Icon="$icon".svg; break; fi
-               if [ -f "$icon".png ]; then Icon="$icon".png; break; fi
-               if [ -f "$icon" ]; then Icon=$icon; break 2; fi
-               icon=$ICONPATH/apps/$size"x"$size/$Icon
-               if [ -f "$icon".svg ]; then Icon="$icon".svg; break; fi
-               if [ -f "$icon".png ]; then Icon="$icon".png; break; fi
-               if [ -f "$icon" ]; then Icon=$icon; break 2; fi
-               icon=$ICONPATH/$Icon
-               if [ -f "$icon".svg ]; then Icon="$icon".svg; break; fi
-               if [ -f "$icon".png ]; then Icon="$icon".png; break; fi
-               if [ -f "$icon" ]; then Icon=$icon; break 2; fi
-            done
-         done
+if [ "$Hidden" = "true" ]; then
+continue
+fi
 
-         if [ "$Terminal" = "true" ]; then
-            Exec="xterm -ls -e $Exec"
-         fi
-         
-		 if [[ $Icon =~ ".png" ]] || [[ $Icon =~ ".xpm" ]]; then
-		 echo "$Name;$Icon;$Exec;$(echo $Categories | cut -d ";" -f1)"
-		 else
-		 Icondestiny="/usr/share/xlunch/icons/entries/"$(basename ${Icon%.*})".png"
-		 convert -density 1536 -background none -resize $NEWICONSIZE"x"$NEWICONSIZE $Icon $Icondestiny
-		 echo "$Name;$Icondestiny;$Exec;$(echo $Categories | cut -d ";" -f1)"
-		 fi
+if [ "$Terminal" = "true" ]; then
+Exec=$(ls -e $Exec)
+fi
 
-      done
-   shift
-   done
+if [ "$Icon" = "" ]; then
+continue
+fi
+
+if [[ $Icon =~ ".png" ]] || [[ $Icon =~ ".xpm" ]]; then
+echo "$Name;$Icon;$Exec;" 2>/dev/null 1>>/etc/xlunch/entries.dsv
+else
+Iconsource=$ICONPATH$Icon".svg"
+Icondestiny="/usr/share/xlunch/icons/entries/"$Icon".png"
+convert -density 1536 -background none -resize 48x48 $Iconsource $Icondestiny
+echo "$Name;$Icondestiny;$Exec;" 2>/dev/null 1>>/etc/xlunch/entries.dsv
+fi
+
+
+done
+shift
+done
 }
 
-process_directories /usr/share/applications 2>/dev/null 1> /etc/xlunch/entries.dsv
+process_directories /usr/share/applications  2>/dev/null
 #end quickgen
 #######################################################################
 ;;
