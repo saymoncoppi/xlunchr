@@ -40,6 +40,26 @@ xlunch --input /etc/xlunch/entries.dsv \
 
 #end menu
 #######################################################################
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ;;
 "--logout") 
 #begin logout
@@ -95,6 +115,26 @@ fi
 
 #end logout
 #######################################################################
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ;;
 "--config") 
 echo "config"
@@ -109,6 +149,22 @@ clear; echo "Checking basic tools"; echo
 		fi
 		echo "$tool is already installed"		
 	done
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 ;;
 "--quickgen") 
 #begin quickgen
@@ -183,6 +239,25 @@ process_directories()
 process_directories /usr/share/applications 2>/dev/null 1> /etc/xlunch/entries.dsv
 #end quickgen
 #######################################################################
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ;;
 "--help") echo "help"
 ;;
