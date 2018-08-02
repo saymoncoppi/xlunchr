@@ -213,6 +213,14 @@ do
 	# $1..$n = dir path with .desktop files
 	process_directories()
 	{
+		#writing new logout file (/etc/xlunch/logout.dsv)
+echo "${shutdown_command[$lang]};$THEME/icons/shutdown.png;shutdown
+${restart_command[$lang]};$THEME/icons/restart.png;restart
+${suspend_command[$lang]};$THEME/icons/suspend.png;suspend
+${lock_command[$lang]};$THEME/icons/lock.png;lock
+${exit_command[$lang]};$THEME/icons/cancel.png;logout" > /etc/xlunch/logout.dsv
+		
+		
 	#warning! Erasing old *.png now
 	find /usr/share/xlunch/icons/entries/ -name "*.png" -type f -exec rm -rf {} \;
 	
@@ -342,12 +350,7 @@ done
 
 
 
-#writing new logout file (/etc/xlunch/logout.dsv)
-echo "${shutdown_command[$lang]};$THEME/icons/shutdown.png;shutdown
-${restart_command[$lang]};$THEME/icons/restart.png;restart
-${suspend_command[$lang]};$THEME/icons/suspend.png;suspend
-${lock_command[$lang]};$THEME/icons/lock.png;lock
-${exit_command[$lang]};$THEME/icons/cancel.png;logout" > /etc/xlunch/logout.dsv
+
             ;;
         "back")
             break
