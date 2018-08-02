@@ -1,7 +1,7 @@
 # xlunchr
 a simple xlunch modernization
 
-![Color theme menu](https://raw.githubusercontent.com/saymoncoppi/xlunchr/master/screenshots/xlunchr_theme_color_menu.png "Color theme menu")
+![Color theme menu](https://raw.githubusercontent.com/saymoncoppi/xlunchr/master/base/docs/screenshots/xlunchr_theme_color_menu.png "Color theme menu")
 
 
 This tool is based on original xlunch project http://xlunch.org
@@ -15,9 +15,9 @@ This tool is based on original xlunch project http://xlunch.org
 
 ## Beautiful themes
 - Color
-- Mix
 - Black
 - White
+- Mix
 - Classic
 - Custom (Make your own)
 
@@ -25,6 +25,7 @@ This tool is based on original xlunch project http://xlunch.org
 - Common icons or Modern icon themes
 - Use PNG or SVG files
 - Auto detect default icon theme
+
 ## Translated commands and screens
 - Auto detect language
 - English
@@ -50,6 +51,8 @@ xlunchr [option]
 - --help 		Show this Help content
 
 # Screenshots
-![Color theme logout](https://raw.githubusercontent.com/saymoncoppi/xlunchr/master/screenshots/xlunchr_theme_color_logout.png "Color theme logout")
-![Color theme menu](https://raw.githubusercontent.com/saymoncoppi/xlunchr/master/screenshots/xlunchr_theme_color_menu.png "Color theme menu")
+![Color theme logout](https://raw.githubusercontent.com/saymoncoppi/xlunchr/master/base/docs/screenshots/xlunchr_theme_color_logout.png "Color theme logout")
+![Color theme menu](https://raw.githubusercontent.com/saymoncoppi/xlunchr/master/base/docs/screenshots/xlunchr_theme_color_menu.png "Color theme menu")
+
+[More Screenshots](https://github.com/saymoncoppi/xlunchr/tree/master/base/docs/screenshots).
 
