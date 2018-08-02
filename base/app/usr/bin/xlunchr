@@ -1,4 +1,28 @@
 #!/bin/bash
+# Copyright (C) 2018 xlunchr.
+#
+# xlunchr
+# a simple xlunch modernization
+# https://github.com/saymoncoppi/xlunchr
+#
+# This tool is based on original xlunch project 
+# http://xlunch.org
+# 
+# Author:     Saymon Coppi <saymoncoppi@gmail.com>
+# Maintainer: Saymon Coppi <saymoncoppi@gmail.com>
+# 
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# any later version.
+# 
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+# 
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #theme_folder
 THEME=/usr/share/xlunch/themes/color_circle
@@ -35,42 +59,72 @@ xlunch --input /etc/xlunch/entries.dsv \
 --hidemissing \
 --highlight /usr/share/xlunch/icons/base/xlunch_highlight.png \
 --font "/usr/share/xlunch/fonts/NotoSans-Regular.ttf/8" \
---button "/usr/share/xlunch/icons/base/xlunch_settings.png;;-30,-30;xlunch_settings" \
---scroll;
+--scroll \
+--multiple \
+--voidclickterminate \
+--dontquit \
+--button "/usr/share/xlunch/icons/base/xlunchr_settings.png;;-30,-30;exec /usr/bin/xlunchr --config" \
+--button "/usr/share/xlunch/icons/categories/20x20/favorites.png;;30,100;exec /usr/bin/xlunchr --menu-favorites" \
+--button "/usr/share/xlunch/icons/categories/20x20/recent.png;;30,150;Recent" \
+--button "/usr/share/xlunch/icons/categories/20x20/all.png;;30,230;All" \
+--button "/usr/share/xlunch/icons/categories/20x20/multimedia.png;;30,280;Multimedia" \
+--button "/usr/share/xlunch/icons/categories/20x20/graphics.png;;30,330;Graphics" \
+--button "/usr/share/xlunch/icons/categories/20x20/network.png;;30,380;Network" \
+--button "/usr/share/xlunch/icons/categories/20x20/office.png;;30,430;Office" \
+--button "/usr/share/xlunch/icons/categories/20x20/settings.png;;30,480;Settings" \
+--button "/usr/share/xlunch/icons/categories/20x20/system.png;;30,530;System" \
+--button "/usr/share/xlunch/icons/categories/20x20/utility.png;;30,580;Utility" \
+--button "/usr/share/xlunch/icons/categories/20x20/others.png;;30,630;Others" \
 
-#end menu
 #######################################################################
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+# Icons credits		:	Font Awesome (http://fa2png.io)
+# xlunchr_setings	:	fa-sliders
+# favorites			:	fa-bookmark
+# recent			:	fa-history
+# all				:	fa-bars
+# multimedia		:	fa-play-circle
+# graphics			:	fa-picture-o
+# network			:	fa-globe
+# office			:	fa-file-text-o
+# settings			:	fa-gear
+# system			:	fa-desktop
+# utility			:	fa-bolt
+# others			:	fa-more
 
 ;;
+"--menu-favorites")
+#begin menu
+xlunch --input /etc/xlunch/entries.dsv \
+--prompt "[  Favorites  ]     ${prompt_desc[$lang]}"  \
+--background $THEME"/bg.png" \
+--voidclickterminate \
+--iconpadding 20 \
+--textpadding 10 \
+--iconsize 48 \
+--leastmargin 10 \
+--hidemissing \
+--highlight /usr/share/xlunch/icons/base/xlunch_highlight.png \
+--font "/usr/share/xlunch/fonts/NotoSans-Regular.ttf/8" \
+--scroll \
+--voidclickterminate \
+--button "/usr/share/xlunch/icons/base/xlunchr_settings.png;;-30,-30;exec /usr/bin/xlunchr --config" \
+--button "/usr/share/xlunch/icons/categories/20x20/favorites.png;;30,100;exec /usr/bin/xlunchr --menu-favorites" \
+--button "/usr/share/xlunch/icons/categories/20x20/recent.png;;30,150;Recent" \
+--button "/usr/share/xlunch/icons/categories/20x20/all.png;;30,230;All" \
+--button "/usr/share/xlunch/icons/categories/20x20/multimedia.png;;30,280;Multimedia" \
+--button "/usr/share/xlunch/icons/categories/20x20/graphics.png;;30,330;Graphics" \
+--button "/usr/share/xlunch/icons/categories/20x20/network.png;;30,380;Network" \
+--button "/usr/share/xlunch/icons/categories/20x20/office.png;;30,430;Office" \
+--button "/usr/share/xlunch/icons/categories/20x20/settings.png;;30,480;Settings" \
+--button "/usr/share/xlunch/icons/categories/20x20/system.png;;30,530;System" \
+--button "/usr/share/xlunch/icons/categories/20x20/utility.png;;30,580;Utility" \
+--button "/usr/share/xlunch/icons/categories/20x20/others.png;;30,630;Others" \
+#end menu
+#######################################################################
+;;
+
 "--logout") 
 #begin logout
-
-
-#writing new file
-echo "${shutdown_command[$lang]};$THEME/icons/shutdown.png;shutdown
-${restart_command[$lang]};$THEME/icons/restart.png;restart
-${suspend_command[$lang]};$THEME/icons/suspend.png;suspend
-${lock_command[$lang]};$THEME/icons/lock.png;lock
-${exit_command[$lang]};$THEME/icons/cancel.png;logout" > /etc/xlunch/logout.dsv
 
 COMMAND=$(
 xlunch --input /etc/xlunch/logout.dsv \
@@ -116,69 +170,54 @@ fi
 #end logout
 #######################################################################
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ;;
 "--config") 
-echo "config"
-clear; echo "Checking basic tools"; echo
+
+ROOT_UID=0
+
+# check command avalibility
+function has_command() {
+    command -v $1 > /dev/null
+}
+
+if [ "$UID" -eq "$ROOT_UID" ]; then
+
+#
+# start config here
+#
+config_options=(check quickgen back)
+
+clear; echo "xlunchr config tool"
+PS3='Please enter your choice: '
+select opt in "${config_options[@]}"
+do
+    case $opt in
+        "check")
+		clear; echo "Checking basic tools"; echo
 	
-	for tool in libimlib2
-	do
-		if [ $(dpkg-query -W -f='${Status}' $tool 2>/dev/null | grep -c "ok installed") -eq 0 ];then
-			echo
-			echo "Installing $tool"
-			apt-get install --no-install-recommends --yes $tool;
-		fi
-		echo "$tool is already installed"		
-	done
+		for tool in libimlib2 #able to add others
+		do
+			if [ $(dpkg-query -W -f='${Status}' $tool 2>/dev/null | grep -c "ok installed") -eq 0 ];then
+				echo
+				echo "Installing $tool"
+				apt-get install --no-install-recommends --yes $tool;
+			fi
+			echo "$tool is already installed"		
+		done
+            ;;
+        "quickgen")
+        
+        
+	ICONSIZES="$1 128 64 48 32" # icon search in given order
+
+	# $1..$n = dir path with .desktop files
+	process_directories()
+	{
+	#warning! Erasing old *.png now
+	find /usr/share/xlunch/icons/entries/ -name "*.png" -type f -exec rm -rf {} \;
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-;;
-"--quickgen") 
-#begin quickgen
-ICONTHEME=$(cat ~/.gtkrc-2.0 | grep gtk-icon-theme-name= | sed -e "s/^gtk-icon-theme-name=//" |sed  's/["]//g')
-if [ $ICONTHEME = "" ]; then
-echo "Pls type your theme name: "
-read ICONTHEME
-fi
-ICONSIZES="$1 128 64 48 32" # icon search in given order
-ICONPATHS="/usr/share/icons/$ICONTHEME /usr/share/icons/hicolor /usr/share/pixmaps"
-NEWICONSIZE=128
-# $1..$n = dir path with .desktop files
-process_directories()
-{
+	ICONPATHS="/usr/share/icons/$ICONTHEME /usr/share/icons/hicolor /usr/share/pixmaps"
+	NEWICONSIZE=128
    while [ "$1" != "" ]; do
 
       for desktop in "$1"/*.desktop; do
@@ -235,29 +274,92 @@ process_directories()
    shift
    done
 }
+        #functions to get icon pack
+        check_gtkrc()
+		{
+			ICONTHEME=$(cat ~/.gtkrc-2.0 | grep gtk-icon-theme-name= | sed -e "s/^gtk-icon-theme-name=//" |sed  's/["]//g')
+				if [ $ICONTHEME = "" ]; then #
+					echo "Can't auto detect default icon theme. Moving to selector..."
+					sleep 2
+					select_icon_theme
+				else
+				process_directories /usr/share/applications 2>/dev/null 1> /etc/xlunch/entries.dsv
+				echo "Done!"
+				sleep 2
+				exit 1
+				fi
+		}
+            
+		select_icon_theme() 
+		{
+					clear; echo "Avaliable options:"
+					declare iconsfolder=($(ls -a /usr/share/icons/ | sed -e 's/\.//g' | sed '/^\s*$/d'| sed 's/default//g'| cat ))  # name w spaces cause bug, removed from the list
+					declare -A avaliable_theme
+					for (( folder=0; folder!=${#iconsfolder[@]}; folder++ ))
+					do  
+					icon_theme_index_file=/usr/share/icons/${iconsfolder[folder]}/index.theme
 
-process_directories /usr/share/applications 2>/dev/null 1> /etc/xlunch/entries.dsv
-#end quickgen
-#######################################################################
+					if [ -f "$icon_theme_index_file" ]; then
+						is_valid=$(cat $icon_theme_index_file | grep "Size=16")
+						if [ "$is_valid" != "" ]; then	
+							avaliable_theme[$folder]="${iconsfolder[folder]}"
+						fi
+					fi
+					done
+
+					each_theme=$( IFS=$'|'; echo "${avaliable_theme[*]}" )
+					PS3='Please enter your choice: '
+					select opt in "${avaliable_theme[@]}"
+					do
+					echo $opt
+						if [[ $opt =~ $each_theme ]]; then	
+							ICONTHEME=$opt
+							process_directories /usr/share/applications 2>/dev/null 1> /etc/xlunch/entries.dsv
+							echo "Done!"
+							sleep 2
+							exit 1
+
+							else
+							echo "Ops!"
+						fi
+					done
+		}
+
+gen_options=(auto select back)
+
+clear; echo "xlunchr config tool"
+PS3='Please enter your choice: '
+select opt in "${gen_options[@]}"
+do
+    case $opt in
+        "auto")check_gtkrc;;
+        "select")select_icon_theme;;
+        "back") break ;;
+        *) echo "invalid option $REPLY";;
+    esac
+done
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#writing new logout file (/etc/xlunch/logout.dsv)
+echo "${shutdown_command[$lang]};$THEME/icons/shutdown.png;shutdown
+${restart_command[$lang]};$THEME/icons/restart.png;restart
+${suspend_command[$lang]};$THEME/icons/suspend.png;suspend
+${lock_command[$lang]};$THEME/icons/lock.png;lock
+${exit_command[$lang]};$THEME/icons/cancel.png;logout" > /etc/xlunch/logout.dsv
+            ;;
+        "back")
+            break
+            ;;
+        *) echo "invalid option $REPLY";;
+    esac
+done
+else
+	# Message  
+	echo -e "Please run this script as root..."
+fi
+	
 ;;
 "--help") echo "help"
 ;;
@@ -265,7 +367,6 @@ process_directories /usr/share/applications 2>/dev/null 1> /etc/xlunch/entries.d
 --menu		Display applications menu
 --logout		Display logout screen
 --config		Run Config tool
---quickgen		Gen the apps entries file
 --help		Help content\n"
 exit 1
 ;;
