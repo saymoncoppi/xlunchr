@@ -1,10 +1,11 @@
 # xlunchr
-a simple xlunch modernization
+a simple xlunch modernization pack
 
-![Color theme menu](https://raw.githubusercontent.com/saymoncoppi/xlunchr/master/base/docs/screenshots/xlunchr_theme_color_menu.png "Color theme menu")
+![Color theme menu](https://raw.githubusercontent.com/saymoncoppi/xlunchr/master/base/docs/screenshots/xlunchr-color-menu.png "Color theme menu")
 
 
 This tool is based on original xlunch project http://xlunch.org
+![xlunch](https://raw.githubusercontent.com/saymoncoppi/xlunchr/master/base/docs/logo/xlunch-original.png "xlunch")
 
 
 
@@ -51,8 +52,8 @@ xlunchr [option]
 - --help 		Show this Help content
 
 # Screenshots
-![Color theme logout](https://raw.githubusercontent.com/saymoncoppi/xlunchr/master/base/docs/screenshots/xlunchr_theme_color_logout.png "Color theme logout")
-![Color theme menu](https://raw.githubusercontent.com/saymoncoppi/xlunchr/master/base/docs/screenshots/xlunchr_theme_color_menu.png "Color theme menu")
+![Color theme logout](https://raw.githubusercontent.com/saymoncoppi/xlunchr/master/base/docs/screenshots/xlunchr-color-logout.png "Color theme logout")
+![Color theme menu](https://raw.githubusercontent.com/saymoncoppi/xlunchr/master/base/docs/screenshots/xlunchr-color-menu.png "Color theme menu")
 
 [More Screenshots](https://github.com/saymoncoppi/xlunchr/tree/master/base/docs/screenshots).
 

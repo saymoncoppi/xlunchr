@@ -1,5 +1,5 @@
 # xlunchr
-a simple xlunch modernization
+a simple xlunch modernization pack
 
 
 ## Beautiful themes
