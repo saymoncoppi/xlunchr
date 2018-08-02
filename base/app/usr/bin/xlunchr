@@ -25,7 +25,7 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #theme_folder
-THEME=/usr/share/xlunch/themes/color_circle
+THEME=/usr/share/xlunch/themes/classic
 
 #Detect default language (ignoring Country)
 get_language=$(locale | grep LANGUAGE | sed -e "s/^LANGUAGE=//" | sed -r 's/(.{2}).*/\1/')
